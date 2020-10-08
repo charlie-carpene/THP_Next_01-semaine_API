@@ -2,8 +2,8 @@ const movieDiv = document.querySelector('#movies');
 const modalDiv = document.getElementsByClassName('modal-content')[0];
 const form = document.querySelector('form');
 const input = document.querySelector('input');
-const apikey = prompt("c'est quoi ta clée d'API ?");
-const apiUrl = `http://www.omdbapi.com/?apikey=${apikey}`;
+const apikey = prompt("c'est quoi ta clé d'API ?");
+const apiUrl = `https://www.omdbapi.com/?apikey=${apikey}`;
 
 form.addEventListener("submit", handleSubmit);
 
