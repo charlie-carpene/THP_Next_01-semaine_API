@@ -3,6 +3,7 @@ const modalDiv = document.getElementsByClassName('modal-content')[0];
 const apiUrl = `http://www.omdbapi.com/?apikey=${APIKEY}`;
 const form = document.querySelector('form');
 const input = document.querySelector('input');
+const APIKEY = prompt("c'est quoi ta clée d'API ?");
 
 form.addEventListener("submit", handleSubmit);
 
