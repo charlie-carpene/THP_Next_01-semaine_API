@@ -1,9 +1,9 @@
 const movieDiv = document.querySelector('#movies');
 const modalDiv = document.getElementsByClassName('modal-content')[0];
-const apiUrl = `http://www.omdbapi.com/?apikey=${APIKEY}`;
 const form = document.querySelector('form');
 const input = document.querySelector('input');
-const APIKEY = prompt("c'est quoi ta clée d'API ?");
+const apikey = prompt("c'est quoi ta clée d'API ?");
+const apiUrl = `http://www.omdbapi.com/?apikey=${apikey}`;
 
 form.addEventListener("submit", handleSubmit);
 
@@ -46,7 +46,7 @@ const showMovies = (movies) => {
         <h4 class="card-title contain">${movie.Title}</h4>
         <p>${movie.Year}</p>
         <img class="card-text" src="${movie.Poster}">
-        <button type="button" class="m-2 btn btn-outline-primary" onclick="showMovie('${movie.imdbID}')">Voir plus</button>
+        <button type="button" class="m-2 btn btn-outline-primary" onclick="showMovie('${movie.imdbID}')">See more</button>
       </div>
     `;
   });
@@ -76,7 +76,7 @@ const showModal = (data) => {
       <p class="m-3">Note : ${data.imdbRating}/10</p>
       <img src="${data.Poster}">
       <p class="text-center mt-5">${data.Plot}</p>
-      <button onclick="hideMovie()" class="mt-3 btn btn-danger">Retour</button>
+      <button onclick="hideMovie()" class="mt-3 btn btn-danger">Close</button>
     </div>
   `;
 };
