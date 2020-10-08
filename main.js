@@ -57,7 +57,7 @@ const showMovies = (movies) => {
 //-------------------------//
 
 async function showMovie(id) {
-  const searchForASpecificMovie = await fetch(`http://www.omdbapi.com/?apikey=${APIKEY}&i=${id}`);
+  const searchForASpecificMovie = await fetch(`https://www.omdbapi.com/?apikey=${APIKEY}&i=${id}`);
   const data = await searchForASpecificMovie.json();
   $('#modal').modal('show');
   showModal(data);
