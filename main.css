@@ -3,3 +3,29 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+img {
+  max-height: 20em;
+  max-width: 15em;
+}
+
+h4 {
+  min-height: 2.5em;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain {
+  max-width: 10em;
+}
+
+.movie {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.padding-input {
+  padding: 0.3em;
+}
